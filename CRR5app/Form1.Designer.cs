@@ -68,6 +68,10 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxOldComiss1 = new System.Windows.Forms.TextBox();
+            this.textBoxNewComiss1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -123,7 +127,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(47, 23);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "10";
+            this.textBox3.Text = "15";
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label3
@@ -141,7 +145,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(47, 23);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "11";
+            this.textBox4.Text = "16";
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label4
@@ -169,7 +173,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(47, 23);
             this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "9";
+            this.textBox5.Text = "14";
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label5
@@ -187,7 +191,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(47, 23);
             this.textBox6.TabIndex = 13;
-            this.textBox6.Text = "12";
+            this.textBox6.Text = "17";
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label6
@@ -205,7 +209,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(47, 23);
             this.textBox7.TabIndex = 15;
-            this.textBox7.Text = "13";
+            this.textBox7.Text = "18";
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label7
@@ -223,7 +227,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(47, 23);
             this.textBox8.TabIndex = 17;
-            this.textBox8.Text = "24";
+            this.textBox8.Text = "27";
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label8
@@ -241,7 +245,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(47, 23);
             this.textBox9.TabIndex = 19;
-            this.textBox9.Text = "20";
+            this.textBox9.Text = "23";
             this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label9
@@ -259,7 +263,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(47, 23);
             this.textBox10.TabIndex = 21;
-            this.textBox10.Text = "22";
+            this.textBox10.Text = "25";
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label10
@@ -277,7 +281,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(47, 23);
             this.textBox11.TabIndex = 23;
-            this.textBox11.Text = "19";
+            this.textBox11.Text = "21";
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label11
@@ -295,7 +299,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(47, 23);
             this.textBox12.TabIndex = 25;
-            this.textBox12.Text = "25";
+            this.textBox12.Text = "28";
             this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label12
@@ -313,7 +317,7 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(47, 23);
             this.textBox13.TabIndex = 27;
-            this.textBox13.Text = "30";
+            this.textBox13.Text = "35";
             this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label13
@@ -331,7 +335,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(47, 23);
             this.textBox14.TabIndex = 29;
-            this.textBox14.Text = "32";
+            this.textBox14.Text = "37";
             this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label14
@@ -349,7 +353,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(47, 23);
             this.textBox15.TabIndex = 31;
-            this.textBox15.Text = "34";
+            this.textBox15.Text = "39";
             this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
             // 
             // label15
@@ -435,11 +439,49 @@
             this.checkBox3.Text = "Удалять пустые строки новых значеий";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(103, 562);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(111, 24);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "%Старая комиссия";
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(209, 562);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(109, 24);
+            this.label20.TabIndex = 41;
+            this.label20.Text = "%Новая комиссия";
+            // 
+            // textBoxOldComiss1
+            // 
+            this.textBoxOldComiss1.Location = new System.Drawing.Point(135, 577);
+            this.textBoxOldComiss1.Name = "textBoxOldComiss1";
+            this.textBoxOldComiss1.Size = new System.Drawing.Size(47, 23);
+            this.textBoxOldComiss1.TabIndex = 42;
+            this.textBoxOldComiss1.Text = "0,08";
+            // 
+            // textBoxNewComiss1
+            // 
+            this.textBoxNewComiss1.Location = new System.Drawing.Point(240, 577);
+            this.textBoxNewComiss1.Name = "textBoxNewComiss1";
+            this.textBoxNewComiss1.Size = new System.Drawing.Size(47, 23);
+            this.textBoxNewComiss1.TabIndex = 43;
+            this.textBoxNewComiss1.Text = "0,18";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 673);
+            this.Controls.Add(this.textBoxNewComiss1);
+            this.Controls.Add(this.textBoxOldComiss1);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -531,5 +573,9 @@
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
+        private Label label19;
+        private Label label20;
+        private TextBox textBoxOldComiss1;
+        private TextBox textBoxNewComiss1;
     }
 }
