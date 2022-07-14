@@ -50,6 +50,8 @@ namespace CRR5app
                 }
                 if (pass)
                 {
+                    button1.Enabled = false;
+                    button2.Enabled = false; //выключаем управление при крорректировке...
                     ew = new ExcelWorker(path, 1);
                     SetManyProcent(int.Parse(textBox1.Text), int.Parse(textBox2.Text), int.Parse(textBox3.Text), int.Parse(textBox4.Text),
                              int.Parse(textBox5.Text), int.Parse(textBox6.Text), int.Parse(textBox7.Text), int.Parse(textBox8.Text),
@@ -57,6 +59,8 @@ namespace CRR5app
                              int.Parse(textBox13.Text), int.Parse(textBox14.Text), int.Parse(textBox15.Text));
                     ew.SaveAs("ќткорректированный файл.xlsx");
                     ewWorked = true;
+                    button1.Enabled = true;//включаем управление при крорректировке...
+                    button2.Enabled = true;
                 }
             }
         }
@@ -126,12 +130,22 @@ namespace CRR5app
                                     ew.WriteToCell(i, returnTotal, Valuedouble: total);
                                 }//нова€ комисси€
                             }
-                            else //если комисси€ покрывает разницу
+                            else //если комисси€ покрывает разницу !!!! |>| ƒанный промежуток отвечает за ƒоплату,-нужно убирать старую доплату(0рублей) в случае если до этого комисси€ не позвал€ла компенсировать цену скидки
                             {
+                                bool BadOldOzonSurcharge = false;
                                 double newcomiss = (commission - difference) * amount;
+
+                                if (ew.ReadCellDouble(i, surchargeOZON-1) != 0d)
+                                {
+                                    ew.WriteToCell(i, surchargeOZON, Valuedouble: 0);//                 |^|
+                                    BadOldOzonSurcharge = true;
+                                }
+
                                 ew.WriteToCell(i, NewModifiedComission, Valuedouble: newcomiss);
                                 if (ew.ReadCell(i, returnSign) != "") //провер€ем на возврат
                                 {
+                                    if(BadOldOzonSurcharge)
+                                        ew.WriteToCell(i, returnOzon, Valuedouble: 0);//                |^|
                                     if (ew.ReadCellDouble(i, Oldcomission) != newcomiss)
                                         ew.WriteToCell(i, returnCommision, Valuedouble: newcomiss);
                                     ew.WriteToCell(i, returnTotal, Valuedouble: total);
