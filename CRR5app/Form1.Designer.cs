@@ -361,9 +361,9 @@
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label15.Location = new System.Drawing.Point(20, 532);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 29);
+            this.label15.Size = new System.Drawing.Size(194, 29);
             this.label15.TabIndex = 32;
-            this.label15.Text = "Итого возвращено";
+            this.label15.Text = "Новая итого возвращено";
             // 
             // button2
             // 
