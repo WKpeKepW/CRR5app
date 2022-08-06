@@ -73,7 +73,7 @@ namespace CRR5app
             else
                 CommissionColumn = OldProcentColumCommission;
             for (int i = Start; i <= Finish; i++)// смотрим только те строки которые находяться в промежутке
-            {
+            {                                                                           // [v] условие при котором пропускается пустые ячейки(это не точно)
                 if (ew.ReadCellDouble(i, CommissionColumn) == CommissionforChange && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d) //если в строке старой комисии 15% и при этом остальные строки прописаны начинаем менять или если включен параметр менять по новой комиссии то меняем
                 {
                     if(!checkBox2.Checked)
@@ -81,7 +81,7 @@ namespace CRR5app
                     if (ew.ReadCellDouble(i, PriceSalesman) == ew.ReadCellDouble(i, PriceImplement)) // если цена продавца та же что и реализации
                     {
                         double priceS = ew.ReadCellDouble(i, PriceSalesman);
-                        double amount; // если в приоритете новое "количество" 
+                        double amount; // если в приоритете новое "количество"
                         if (checkBox1.Checked && ew.ReadCellDouble(i, AmountGoods + 1) != 0.0d)
                             amount = ew.ReadCellDouble(i, AmountGoods + 1);
                         else
