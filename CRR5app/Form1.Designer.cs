@@ -28,508 +28,541 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelрHeader = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBoxOldComiss1 = new System.Windows.Forms.TextBox();
-            this.textBoxNewComiss1 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            textBox4 = new TextBox();
+            label4 = new Label();
+            labelрHeader = new Label();
+            textBox5 = new TextBox();
+            label5 = new Label();
+            textBox6 = new TextBox();
+            label6 = new Label();
+            textBox7 = new TextBox();
+            label7 = new Label();
+            textBox8 = new TextBox();
+            label8 = new Label();
+            textBox9 = new TextBox();
+            label9 = new Label();
+            textBox10 = new TextBox();
+            label10 = new Label();
+            textBox11 = new TextBox();
+            label11 = new Label();
+            textBox12 = new TextBox();
+            label12 = new Label();
+            textBox13 = new TextBox();
+            label13 = new Label();
+            textBox14 = new TextBox();
+            label14 = new Label();
+            textBox15 = new TextBox();
+            label15 = new Label();
+            button2 = new Button();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            label19 = new Label();
+            label20 = new Label();
+            textBoxOldComiss1 = new TextBox();
+            textBoxNewComiss1 = new TextBox();
+            toolTip1 = new ToolTip(components);
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(324, 565);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Начальный столбец";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(324, 565);
+            label1.Name = "label1";
+            label1.Size = new Size(153, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Начальный столбец";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(324, 589);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 23);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox1.Location = new Point(324, 589);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "15";
+            textBox1.Size = new Size(153, 23);
+            textBox1.TabIndex = 1;
+            textBox1.KeyPress += PassNumber;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(103, 603);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 65);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Корректировать и сохранить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(103, 603);
+            button1.Name = "button1";
+            button1.Size = new Size(209, 65);
+            button1.TabIndex = 2;
+            button1.Text = "Корректировать и сохранить";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(324, 642);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 23);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox2.Location = new Point(324, 642);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(153, 23);
+            textBox2.TabIndex = 4;
+            textBox2.KeyPress += PassNumber;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(324, 618);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Конечный столбец";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(324, 618);
+            label2.Name = "label2";
+            label2.Size = new Size(145, 21);
+            label2.TabIndex = 3;
+            label2.Text = "Конечный столбец";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(180, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(47, 23);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "15";
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox3.Location = new Point(180, 175);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(47, 23);
+            textBox3.TabIndex = 6;
+            textBox3.Text = "15";
+            textBox3.KeyPress += PassNumber;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(169, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 64);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Комиссия за продажу по категории";
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(169, 83);
+            label3.Name = "label3";
+            label3.Size = new Size(143, 64);
+            label3.TabIndex = 5;
+            label3.Text = "Комиссия за продажу по категории";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(341, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(47, 23);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "16";
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox4.Location = new Point(341, 175);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(47, 23);
+            textBox4.TabIndex = 8;
+            textBox4.Text = "16";
+            textBox4.KeyPress += PassNumber;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(321, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 69);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Новая комиссия за продажу по категории";
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(321, 83);
+            label4.Name = "label4";
+            label4.Size = new Size(153, 69);
+            label4.TabIndex = 7;
+            label4.Text = "Новая комиссия за продажу по категории";
             // 
             // labelрHeader
             // 
-            this.labelрHeader.AutoSize = true;
-            this.labelрHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelрHeader.Location = new System.Drawing.Point(40, 9);
-            this.labelрHeader.Name = "labelрHeader";
-            this.labelрHeader.Size = new System.Drawing.Size(429, 30);
-            this.labelрHeader.TabIndex = 9;
-            this.labelрHeader.Text = "Номера столбцов в алфовитной системе";
+            labelрHeader.AutoSize = true;
+            labelрHeader.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            labelрHeader.Location = new Point(40, 9);
+            labelрHeader.Name = "labelрHeader";
+            labelрHeader.Size = new Size(429, 30);
+            labelрHeader.TabIndex = 9;
+            labelрHeader.Text = "Номера столбцов в алфовитной системе";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(30, 175);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(47, 23);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "14";
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox5.Location = new Point(30, 175);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(47, 23);
+            textBox5.TabIndex = 11;
+            textBox5.Text = "14";
+            textBox5.KeyPress += PassNumber;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(21, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 73);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Цена продавца, руб. (с учетом скидки продавца)";
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(21, 83);
+            label5.Name = "label5";
+            label5.Size = new Size(146, 73);
+            label5.TabIndex = 10;
+            label5.Text = "Цена продавца, руб. (с учетом скидки продавца)";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 278);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(47, 23);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Text = "17";
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox6.Location = new Point(29, 278);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(47, 23);
+            textBox6.TabIndex = 13;
+            textBox6.Text = "17";
+            textBox6.KeyPress += PassNumber;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(24, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 45);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Цена реализации, руб.";
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(24, 230);
+            label6.Name = "label6";
+            label6.Size = new Size(146, 45);
+            label6.TabIndex = 12;
+            label6.Text = "Цена реализации, руб.";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(179, 278);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(47, 23);
-            this.textBox7.TabIndex = 15;
-            this.textBox7.Text = "18";
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox7.Location = new Point(179, 278);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(47, 23);
+            textBox7.TabIndex = 15;
+            textBox7.Text = "18";
+            textBox7.KeyPress += PassNumber;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(168, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 45);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Количество продаж";
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(168, 230);
+            label7.Name = "label7";
+            label7.Size = new Size(156, 45);
+            label7.TabIndex = 14;
+            label7.Text = "Количество продаж";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(340, 278);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(47, 23);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.Text = "27";
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox8.Location = new Point(340, 278);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(47, 23);
+            textBox8.TabIndex = 17;
+            textBox8.Text = "27";
+            textBox8.KeyPress += PassNumber;
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(324, 230);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 45);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Новая итого к начислению, руб.";
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(324, 230);
+            label8.Name = "label8";
+            label8.Size = new Size(156, 45);
+            label8.TabIndex = 16;
+            label8.Text = "Новая итого к начислению, руб.";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(30, 385);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(47, 23);
-            this.textBox9.TabIndex = 19;
-            this.textBox9.Text = "23";
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox9.Location = new Point(30, 385);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(47, 23);
+            textBox9.TabIndex = 19;
+            textBox9.Text = "23";
+            textBox9.KeyPress += PassNumber;
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(25, 315);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 64);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Итого комиссия с учетом скидок и наценки, руб.";
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(25, 315);
+            label9.Name = "label9";
+            label9.Size = new Size(146, 64);
+            label9.TabIndex = 18;
+            label9.Text = "Итого комиссия с учетом скидок и наценки, руб.";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(180, 385);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(47, 23);
-            this.textBox10.TabIndex = 21;
-            this.textBox10.Text = "25";
-            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox10.Location = new Point(180, 385);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(47, 23);
+            textBox10.TabIndex = 21;
+            textBox10.Text = "25";
+            textBox10.KeyPress += PassNumber;
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(169, 315);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 64);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Новая итого комиссия с учетом скидок и наценки, руб.";
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(169, 315);
+            label10.Name = "label10";
+            label10.Size = new Size(146, 64);
+            label10.TabIndex = 20;
+            label10.Text = "Новая итого комиссия с учетом скидок и наценки, руб.";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(341, 385);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(47, 23);
-            this.textBox11.TabIndex = 23;
-            this.textBox11.Text = "21";
-            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox11.Location = new Point(341, 385);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(47, 23);
+            textBox11.TabIndex = 23;
+            textBox11.Text = "21";
+            textBox11.KeyPress += PassNumber;
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(325, 315);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 68);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Новая доплата за счет Ozon, руб.";
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Location = new Point(325, 315);
+            label11.Name = "label11";
+            label11.Size = new Size(146, 68);
+            label11.TabIndex = 22;
+            label11.Text = "Новая доплата за счет Ozon, руб.";
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(26, 506);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(47, 23);
-            this.textBox12.TabIndex = 25;
-            this.textBox12.Text = "28";
-            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox12.Location = new Point(26, 506);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(47, 23);
+            textBox12.TabIndex = 25;
+            textBox12.Text = "28";
+            textBox12.KeyPress += PassNumber;
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(23, 437);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 64);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Цена реализации, руб. возврата";
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Location = new Point(23, 437);
+            label12.Name = "label12";
+            label12.Size = new Size(120, 64);
+            label12.TabIndex = 24;
+            label12.Text = "Цена реализации, руб. возврата";
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(176, 506);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(47, 23);
-            this.textBox13.TabIndex = 27;
-            this.textBox13.Text = "35";
-            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox13.Location = new Point(176, 506);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(47, 23);
+            textBox13.TabIndex = 27;
+            textBox13.Text = "35";
+            textBox13.KeyPress += PassNumber;
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(169, 437);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(146, 64);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Новая доплата за счет Ozon, руб. возврат";
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.Location = new Point(169, 437);
+            label13.Name = "label13";
+            label13.Size = new Size(146, 64);
+            label13.TabIndex = 26;
+            label13.Text = "Новая доплата за счет Ozon, руб. возврат";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(337, 506);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(47, 23);
-            this.textBox14.TabIndex = 29;
-            this.textBox14.Text = "37";
-            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox14.Location = new Point(337, 506);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(47, 23);
+            textBox14.TabIndex = 29;
+            textBox14.Text = "37";
+            textBox14.KeyPress += PassNumber;
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(321, 437);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 66);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Новая итого комиссия с учетом скидок и наценки, руб.";
+            label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.Location = new Point(321, 437);
+            label14.Name = "label14";
+            label14.Size = new Size(147, 66);
+            label14.TabIndex = 28;
+            label14.Text = "Новая итого комиссия с учетом скидок и наценки, руб.";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(26, 564);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(47, 23);
-            this.textBox15.TabIndex = 31;
-            this.textBox15.Text = "39";
-            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PassNumber);
+            textBox15.Location = new Point(26, 564);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(47, 23);
+            textBox15.TabIndex = 31;
+            textBox15.Text = "39";
+            textBox15.KeyPress += PassNumber;
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(20, 532);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(194, 29);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Новая итого возвращено";
+            label15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.Location = new Point(20, 532);
+            label15.Name = "label15";
+            label15.Size = new Size(194, 29);
+            label15.TabIndex = 32;
+            label15.Text = "Новая итого возвращено";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 612);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 53);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Открыть отчёт";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(12, 612);
+            button2.Name = "button2";
+            button2.Size = new Size(65, 53);
+            button2.TabIndex = 33;
+            button2.Text = "Открыть отчёт";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(180, 58);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 25);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "Справочно";
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Location = new Point(180, 58);
+            label16.Name = "label16";
+            label16.Size = new Size(110, 25);
+            label16.TabIndex = 34;
+            label16.Text = "Справочно";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(162, 205);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(125, 25);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "Реализовано";
+            label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Location = new Point(162, 205);
+            label17.Name = "label17";
+            label17.Size = new Size(125, 25);
+            label17.TabIndex = 35;
+            label17.Text = "Реализовано";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(127, 411);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(209, 25);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Возвращено клиентом";
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Location = new Point(127, 411);
+            label18.Name = "label18";
+            label18.Size = new Size(209, 25);
+            label18.TabIndex = 36;
+            label18.Text = "Возвращено клиентом";
             // 
             // checkBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(160, 256);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(164, 16);
-            this.checkBox1.TabIndex = 37;
-            this.checkBox1.Text = "В приоритете новое значение";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Location = new Point(148, 259);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(160, 16);
+            checkBox1.TabIndex = 37;
+            checkBox1.Text = "В приоритете новый столбец";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(324, 155);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(104, 16);
-            this.checkBox2.TabIndex = 38;
-            this.checkBox2.Text = "Только новые 8%";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoCheck = false;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(293, 211);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(202, 16);
-            this.checkBox3.TabIndex = 39;
-            this.checkBox3.Text = "Удалять пустые строки новых значеий";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            checkBox2.AutoSize = true;
+            checkBox2.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox2.Location = new Point(289, 155);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(214, 16);
+            checkBox2.TabIndex = 38;
+            checkBox2.Text = "Корректировка только новых процентов";
+            checkBox2.UseVisualStyleBackColor = true;
             // 
             // label19
             // 
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(103, 562);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(111, 24);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "%Старая комиссия";
+            label19.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Location = new Point(103, 562);
+            label19.Name = "label19";
+            label19.Size = new Size(111, 24);
+            label19.TabIndex = 40;
+            label19.Text = "%Старая комиссия";
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(209, 562);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(109, 24);
-            this.label20.TabIndex = 41;
-            this.label20.Text = "%Новая комиссия";
+            label20.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.Location = new Point(209, 562);
+            label20.Name = "label20";
+            label20.Size = new Size(109, 24);
+            label20.TabIndex = 41;
+            label20.Text = "%Новая комиссия";
             // 
             // textBoxOldComiss1
             // 
-            this.textBoxOldComiss1.Location = new System.Drawing.Point(135, 577);
-            this.textBoxOldComiss1.Name = "textBoxOldComiss1";
-            this.textBoxOldComiss1.Size = new System.Drawing.Size(47, 23);
-            this.textBoxOldComiss1.TabIndex = 42;
-            this.textBoxOldComiss1.Text = "0,08";
+            textBoxOldComiss1.Location = new Point(135, 577);
+            textBoxOldComiss1.Name = "textBoxOldComiss1";
+            textBoxOldComiss1.PlaceholderText = "0,08";
+            textBoxOldComiss1.Size = new Size(47, 23);
+            textBoxOldComiss1.TabIndex = 42;
             // 
             // textBoxNewComiss1
             // 
-            this.textBoxNewComiss1.Location = new System.Drawing.Point(240, 577);
-            this.textBoxNewComiss1.Name = "textBoxNewComiss1";
-            this.textBoxNewComiss1.Size = new System.Drawing.Size(47, 23);
-            this.textBoxNewComiss1.TabIndex = 43;
-            this.textBoxNewComiss1.Text = "0,18";
+            textBoxNewComiss1.Location = new Point(240, 577);
+            textBoxNewComiss1.Name = "textBoxNewComiss1";
+            textBoxNewComiss1.PlaceholderText = "0,18";
+            textBoxNewComiss1.Size = new Size(47, 23);
+            textBoxNewComiss1.TabIndex = 43;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(460, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(14, 15);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 44;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(480, 141);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(14, 15);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 45;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(306, 252);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(14, 15);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 46;
+            pictureBox3.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 673);
-            this.Controls.Add(this.textBoxNewComiss1);
-            this.Controls.Add(this.textBoxOldComiss1);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelрHeader);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Корректировка отчёта о реализации";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(504, 673);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(textBoxNewComiss1);
+            Controls.Add(textBoxOldComiss1);
+            Controls.Add(label20);
+            Controls.Add(label19);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
+            Controls.Add(label18);
+            Controls.Add(label17);
+            Controls.Add(label16);
+            Controls.Add(button2);
+            Controls.Add(textBox15);
+            Controls.Add(label15);
+            Controls.Add(textBox14);
+            Controls.Add(label14);
+            Controls.Add(textBox13);
+            Controls.Add(label13);
+            Controls.Add(textBox12);
+            Controls.Add(label12);
+            Controls.Add(textBox11);
+            Controls.Add(label11);
+            Controls.Add(textBox10);
+            Controls.Add(label10);
+            Controls.Add(textBox9);
+            Controls.Add(label9);
+            Controls.Add(textBox8);
+            Controls.Add(label8);
+            Controls.Add(textBox7);
+            Controls.Add(label7);
+            Controls.Add(textBox6);
+            Controls.Add(label6);
+            Controls.Add(textBox5);
+            Controls.Add(label5);
+            Controls.Add(labelрHeader);
+            Controls.Add(textBox4);
+            Controls.Add(label4);
+            Controls.Add(textBox3);
+            Controls.Add(label3);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "Корректировка отчёта о реализации";
+            FormClosing += Form1_FormClosing;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -572,10 +605,13 @@
         private Label label18;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
-        private CheckBox checkBox3;
         private Label label19;
         private Label label20;
         private TextBox textBoxOldComiss1;
         private TextBox textBoxNewComiss1;
+        private ToolTip toolTip1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

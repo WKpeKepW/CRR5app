@@ -10,6 +10,7 @@ namespace CRR5app
         public Form1()
         {
             InitializeComponent();
+            tooltips();
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -46,7 +47,7 @@ namespace CRR5app
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Произошла ошибка ввода данных, в столбцах %Комиссий. Корректная запись должна производиться с знаком ','Подробнее: "+ ex);
+                    MessageBox.Show("Произошла ошибка ввода данных, в столбцах %Комиссий. Корректная запись должна производиться с знаком ','Подробнее: " + ex);
                 }
                 if (pass)
                 {
@@ -66,7 +67,7 @@ namespace CRR5app
         }
         private void SetManyProcent(int Start, int Finish, int OldProcentColumCommission, int NewProcentColumCommission, int PriceSalesman, int PriceImplement, int AmountGoods, int NewTotalSum, int Oldcomission, int NewModifiedComission, int surchargeOZON, int returnSign, int returnOzon, int returnCommision, int returnTotal)
         {
-            
+
             int CommissionColumn;
             if (checkBox2.Checked) // Пересчитывает по столбцу с процентом комиссии по умолчанию, или же по новосозданному столбцу новой комиссии
                 CommissionColumn = NewProcentColumCommission;
@@ -76,8 +77,8 @@ namespace CRR5app
             {                                                                           // [v] условие при котором пропускается пустые ячейки(это не точно)
                 if (ew.ReadCellDouble(i, CommissionColumn) == CommissionforChange && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d) //если в строке старой комисии 15% и при этом остальные строки прописаны начинаем менять или если включен параметр менять по новой комиссии то меняем
                 {
-                    if(!checkBox2.Checked)
-                        ew.WriteToCell(i, NewProcentColumCommission, Valuedouble: NewCommissionforChange); //изменяем цену комисии
+                    //if (!checkBox2.Checked)//если в приритете новая комиссия не меняем
+                    ew.WriteToCell(i, NewProcentColumCommission, Valuedouble: NewCommissionforChange); //изменяем цену комисии
                     if (ew.ReadCellDouble(i, PriceSalesman) == ew.ReadCellDouble(i, PriceImplement)) // если цена продавца та же что и реализации
                     {
                         double priceS = ew.ReadCellDouble(i, PriceSalesman);
@@ -97,6 +98,7 @@ namespace CRR5app
                         if (ew.ReadCell(i, returnSign) != "") //проверяем на возврат
                         { ew.WriteToCell(i, returnCommision, Valuedouble: commission); ew.WriteToCell(i, returnTotal, Valuedouble: total); }
                     }
+
                     else if (ew.ReadCellDouble(i, PriceSalesman) > ew.ReadCellDouble(i, PriceImplement)) // если цена продавца больше цены реализации
                     {
                         double priceS = ew.ReadCellDouble(i, PriceSalesman);
@@ -135,7 +137,7 @@ namespace CRR5app
                                 bool BadOldOzonSurcharge = false;
                                 double newcomiss = (commission - difference) * amount;
 
-                                if (ew.ReadCellDouble(i, surchargeOZON-1) != 0d)
+                                if (ew.ReadCellDouble(i, surchargeOZON - 1) != 0d)
                                 {
                                     ew.WriteToCell(i, surchargeOZON, Valuedouble: 0);//                 |^|
                                     BadOldOzonSurcharge = true;
@@ -144,7 +146,7 @@ namespace CRR5app
                                 ew.WriteToCell(i, NewModifiedComission, Valuedouble: newcomiss);
                                 if (ew.ReadCell(i, returnSign) != "") //проверяем на возврат
                                 {
-                                    if(BadOldOzonSurcharge)
+                                    if (BadOldOzonSurcharge)
                                         ew.WriteToCell(i, returnOzon, Valuedouble: 0);//                |^|
                                     if (ew.ReadCellDouble(i, Oldcomission) != newcomiss)
                                         ew.WriteToCell(i, returnCommision, Valuedouble: newcomiss);
@@ -168,6 +170,7 @@ namespace CRR5app
                             }
                         }
                     }
+
                     else // если цена продавца меньше цены реализации
                     {
                         double priceS = ew.ReadCellDouble(i, PriceSalesman);
@@ -180,8 +183,8 @@ namespace CRR5app
                             if (ew.ReadCellDouble(i, AmountGoods) == 0)
                                 MessageBox.Show("В ячейке обнаружено количество товара 0 по этому программа просчитает данные столбцы как 0");
                             amount = ew.ReadCellDouble(i, AmountGoods);
-                        }    
-                           // конец условия приоритета
+                        }
+                        // конец условия приоритета
                         double difference = (priceP - priceS) * amount;
                         double commission = priceS * NewCommissionforChange * amount;
                         double newcomiss = difference + commission;
@@ -193,28 +196,28 @@ namespace CRR5app
                     }
                 }
                 //if ((ew.ReadCellDouble(i, OldProcentColumCommission) == 0.15d && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d) || (checkBox2.Checked && ew.ReadCellDouble(i, NewProcentColumCommission) == 0.08d && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d))
-                
-                //if (ew.ReadCellDouble(i, CommissionColumn) == CommissionforChange && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d)
-               
 
-                //сейчас он удаляет нужные строки где была котеровка количиства, нужно сравнивать по полю ниже есть ли там 8% процетов в новой комисии и нет ли в старой комиссии 15%
-                else if (checkBox2.Checked && checkBox3.Checked && ew.ReadCellDouble(i, NewProcentColumCommission) == 0d)//очищаем значения в случае если ктото случайно заполнил не те значения
-                {
-                    if (ew.ReadCellDouble(i + 1, NewProcentColumCommission) == NewCommissionforChange && ew.ReadCellDouble(i + 1, OldProcentColumCommission) == 0)//бывают случаи когда люди забывают сменить 8% в строку корректировки количиства и тогда программа стерает новую строку нада разабраться пример 345
-                    {/*заглушка чтобы не обнулял строки где идет котеровка количества товара*/ }
-                    else
-                    {
-                        ew.WriteToCell(i, NewProcentColumCommission, "null");
-                        ew.WriteToCell(i, AmountGoods + 1, "null");
-                        ew.WriteToCell(i, AmountGoods + 3, "null");
-                        ew.WriteToCell(i, surchargeOZON, "null");
-                        ew.WriteToCell(i, NewModifiedComission, "null");
-                        ew.WriteToCell(i, NewTotalSum, "null");
-                        ew.WriteToCell(i, returnOzon, "null");
-                        ew.WriteToCell(i, returnCommision, "null");
-                        ew.WriteToCell(i, returnTotal, "null");
-                    }
-                }
+                //if (ew.ReadCellDouble(i, CommissionColumn) == CommissionforChange && ew.ReadCellDouble(i, OldProcentColumCommission + 2) != 0.0d)
+
+
+                ////сейчас он удаляет нужные строки где была котеровка количиства, нужно сравнивать по полю ниже есть ли там 8% процетов в новой комисии и нет ли в старой комиссии 15%
+                //else if (checkBox2.Checked && checkBox3.Checked && ew.ReadCellDouble(i, NewProcentColumCommission) == 0d)//очищаем значения в случае если ктото случайно заполнил не те значения
+                //{
+                //    if (ew.ReadCellDouble(i + 1, NewProcentColumCommission) == NewCommissionforChange && ew.ReadCellDouble(i + 1, OldProcentColumCommission) == 0)//бывают случаи когда люди забывают сменить 8% в строку корректировки количиства и тогда программа стерает новую строку нада разабраться пример 345
+                //    {/*заглушка чтобы не обнулял строки где идет котеровка количества товара*/ }
+                //    else
+                //    {
+                //        ew.WriteToCell(i, NewProcentColumCommission, "null");
+                //        ew.WriteToCell(i, AmountGoods + 1, "null");
+                //        ew.WriteToCell(i, AmountGoods + 3, "null");
+                //        ew.WriteToCell(i, surchargeOZON, "null");
+                //        ew.WriteToCell(i, NewModifiedComission, "null");
+                //        ew.WriteToCell(i, NewTotalSum, "null");
+                //        ew.WriteToCell(i, returnOzon, "null");
+                //        ew.WriteToCell(i, returnCommision, "null");
+                //        ew.WriteToCell(i, returnTotal, "null");
+                //    }
+                //}
             }
         }
 
@@ -230,6 +233,16 @@ namespace CRR5app
             {
                 ew.Dispose();
             }
+        }
+        public void tooltips()
+        {
+            ToolTip t1 = new ToolTip();
+            t1.SetToolTip(pictureBox2, "В случае если вам необходимо изменить только данные из столбца новая комиссия,\n несмотря на данные в столбце старая комиссия,\n" +
+                " вы можете воспользоваться данной функцией. Изменяет только отмеченные комиссией столбцы.");
+            ToolTip t2 = new ToolTip();
+            t2.SetToolTip(pictureBox1, "Цифры указанные ниже являются номерами столбцов в экселе,\n в нём они отраженны в виде английского алфавита,\n достаточно знать номер буквы в английском алфавите");
+            ToolTip t3 = new ToolTip();
+            t3.SetToolTip(pictureBox3, "Обработка данных будет производиться исходя из количества товара указанное в новом столбце");
         }
     }
 }
