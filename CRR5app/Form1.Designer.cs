@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             textBox1 = new TextBox();
@@ -72,7 +71,6 @@
             label20 = new Label();
             textBoxOldComiss1 = new TextBox();
             textBoxNewComiss1 = new TextBox();
-            toolTip1 = new ToolTip(components);
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -609,7 +607,6 @@
         private Label label20;
         private TextBox textBoxOldComiss1;
         private TextBox textBoxNewComiss1;
-        private ToolTip toolTip1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
